@@ -12,7 +12,7 @@ export default function Navbar() {
             <Link to={"/date"}>Date</Link>
 
             <Routes>
-                <Route path="/math" element={ <Math/>} />
+                <Route path="/math" element={ <Math/> } />
                 <Route path="/trivia" element={ <Trivia/> } />
                 <Route path="/date" element={ <Date/> } />
             </Routes>
