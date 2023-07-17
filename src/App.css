@@ -37,8 +37,26 @@
   }
 }
 
-.navbar {
-  text-align: center;
-  background-color: grey;
-  padding: 20px;
+.navbar-container {
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: rgb(59, 57, 57);
+}
+
+body{
+  color: #fff;
+  background-color: #53555a;
 }
