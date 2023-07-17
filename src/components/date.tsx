@@ -43,6 +43,7 @@ export default function Date() {
             <br/>
             {trivia} 
             {trivia ? <button onClick={saveToFavorites}>Save</button> : ""}
+            <h3></h3>
             {favorites.map(favorite => 
                 <p key={favorite}>{favorite}</p>)}
         </>

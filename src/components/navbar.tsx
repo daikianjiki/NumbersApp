@@ -11,11 +11,11 @@ export default function Navbar() {
             <Link to={"/trivia"}>Trivia</Link>
             <Link to={"/date"}>Date</Link>
 
-            <Routes>
+            {/* <Routes>
                 <Route path="/math" element={ <Math/> } />
                 <Route path="/trivia" element={ <Trivia/> } />
                 <Route path="/date" element={ <Date/> } />
-            </Routes>
+            </Routes> */}
         </>
     )
 
