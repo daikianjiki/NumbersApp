@@ -7,6 +7,10 @@ export default function Date() {
     const [month, setMonth] = useState(0)
     const [date, setDate] = useState(0)
     const [trivia, setTrivia] = useState("")
+    const [favorites, setFavorites] = useState<string[]>([])
+
+    useEffect(() => {
+    }, [favorites])
 
     function getDate(): void {
         axios.get(`http://numbersapi.com/${month}/${date}/date`).then
@@ -22,7 +26,10 @@ export default function Date() {
         } else if (e.target.name === "date") {
             setDate(parseInt(e.target.value))
         }
-
+    }
+    function saveToFavorites() {
+        const favorite = trivia
+        setFavorites([...favorites, favorite])
     }
     
     return (
@@ -34,7 +41,10 @@ export default function Date() {
             <br/>
             <button onClick={getDate}>Get</button>
             <br/>
-            {trivia}
+            {trivia} 
+            {trivia ? <button onClick={saveToFavorites}>Save</button> : ""}
+            {favorites.map(favorite => 
+                <p key={favorite}>{favorite}</p>)}
         </>
     )
 }
